@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
-
 const app = express()
 
 import cors from 'cors'
@@ -12,9 +11,9 @@ const PORT = process.env.PORT || 8000
 app.use(express.json())
 app.use(cors())
 
-import paymentRouter from "./routers/paymentRouter"
+import paymentRouter from "./routers/paymentRouter.js"
 
-app.use('/api/v1/payment', paymentRouter)
+app.use('/shoe-trek/payment', paymentRouter)
 
 app.listen(PORT, (error)=>{
     if(error){
